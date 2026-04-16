@@ -26,16 +26,16 @@ export default function Footer() {
               }}
               className="inline-block mb-6"
             >
-              <span className="text-2xl font-bold tracking-wider text-[#F4F1EC]">
-                RR <span className="text-[#C79A6B]">Boerboels</span>
-              </span>
+<span className="text-2xl font-bold tracking-wider text-[#F4F1EC]">
+  RR <span className="text-[#C79A6B]">Boerboels</span>
+</span>
             </a>
             <p className="text-[#B8B0A8] max-w-md mb-6">
               Elite Boerboel breeding in Madagascar. Champion bloodlines, health-tested, SABBS registered.
             </p>
             <div className="flex items-center gap-4">
               <a 
-                href="https://wa.me/261XXXXXXXXX"
+                href="https://wa.me/261346639119"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-[rgba(199,154,107,0.15)] border border-[rgba(199,154,107,0.3)] rounded-lg flex items-center justify-center text-[#C79A6B] hover:bg-[rgba(199,154,107,0.25)] transition-all"
@@ -44,7 +44,9 @@ export default function Footer() {
                 <MessageCircle className="w-5 h-5" />
               </a>
               <a 
-                href="mailto:contact@doublerboerboels.com"
+                href="mailto:contact@rrboerboels.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-[rgba(199,154,107,0.15)] border border-[rgba(199,154,107,0.3)] rounded-lg flex items-center justify-center text-[#C79A6B] hover:bg-[rgba(199,154,107,0.25)] transition-all"
                 aria-label="Email"
               >
@@ -84,14 +86,14 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-[#C79A6B] mt-0.5 flex-shrink-0" />
-                <a href="mailto:contact@doublerboerboels.com" className="text-[#B8B0A8] text-sm hover:text-[#C79A6B] transition-colors">
+                <a href="mailto:contact@rrboerboels.com" className="text-[#B8B0A8] text-sm hover:text-[#C79A6B] transition-colors">
                   contact@doublerboerboels.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <MessageCircle className="w-5 h-5 text-[#C79A6B] mt-0.5 flex-shrink-0" />
-                <a href="https://wa.me/261XXXXXXXXX" className="text-[#B8B0A8] text-sm hover:text-[#C79A6B] transition-colors">
-                  +261 XX XXX XXXX
+                <a href="https://wa.me/261346639119" className="text-[#B8B0A8] text-sm hover:text-[#C79A6B] transition-colors">
+                  +261 34 66 391 19
                 </a>
               </li>
             </ul>

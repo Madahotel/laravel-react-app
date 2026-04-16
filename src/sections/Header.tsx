@@ -178,7 +178,7 @@ export default function Header() {
 
           {/* Mobile WhatsApp */}
           <a
-            href="https://wa.me/261341234567"
+            href="https://wa.me/261346639119"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-full text-base font-semibold hover:bg-[#128C7E] transition-colors duration-200"
