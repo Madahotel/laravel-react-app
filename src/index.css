@@ -1,0 +1,271 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* RR Boerboels Color Palette */
+  --color-bg-primary: #0B0B0C;
+  --color-bg-secondary: #141415;
+  --color-bg-tertiary: #1C1C1E;
+  --color-accent: #C79A6B;
+  --color-accent-hover: #D4AA7A;
+  --color-text-primary: #F4F1EC;
+  --color-text-secondary: #B8B0A8;
+  --color-text-muted: #6B6560;
+  --color-border: rgba(199, 154, 107, 0.2);
+  
+  /* shadcn variables */
+  --background: 0 0% 4.7%;
+  --foreground: 36 23% 94%;
+  --card: 0 0% 7.8%;
+  --card-foreground: 36 23% 94%;
+  --popover: 0 0% 7.8%;
+  --popover-foreground: 36 23% 94%;
+  --primary: 32 38% 60%;
+  --primary-foreground: 0 0% 4.7%;
+  --secondary: 0 0% 11%;
+  --secondary-foreground: 36 23% 94%;
+  --muted: 0 0% 15%;
+  --muted-foreground: 30 5% 42%;
+  --accent: 32 38% 60%;
+  --accent-foreground: 0 0% 4.7%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 32 38% 60% / 0.2;
+  --input: 0 0% 15%;
+  --ring: 32 38% 60%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-[#0B0B0C] text-[#F4F1EC] antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-hover);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+/* Section Styles */
+.section {
+  @apply py-20 px-4 md:px-8 lg:px-16;
+}
+
+.section-alt {
+  @apply bg-[#141415];
+}
+
+.section-header {
+  @apply text-center mb-16;
+}
+
+.section-label {
+  @apply text-xs font-semibold uppercase tracking-[0.2em] text-[#C79A6B] mb-4 block;
+}
+
+.section-title {
+  @apply text-3xl md:text-4xl lg:text-5xl mb-4 text-[#F4F1EC];
+}
+
+.section-subtitle {
+  @apply text-lg text-[#B8B0A8] max-w-2xl mx-auto;
+}
+
+/* Button Styles */
+.btn-primary {
+  @apply inline-flex items-center gap-2 bg-[#C79A6B] text-[#0B0B0C] px-8 py-4 text-sm font-semibold uppercase tracking-wider transition-all duration-300;
+}
+
+.btn-primary:hover {
+  @apply bg-[#D4AA7A] -translate-y-0.5;
+  box-shadow: 0 10px 30px rgba(199, 154, 107, 0.3);
+}
+
+.btn-secondary {
+  @apply inline-flex items-center gap-2 bg-transparent border-2 border-[#C79A6B] text-[#C79A6B] px-8 py-4 text-sm font-semibold uppercase tracking-wider transition-all duration-300;
+}
+
+.btn-secondary:hover {
+  @apply bg-[#C79A6B] text-[#0B0B0C];
+}
+
+/* Card Styles */
+.card-gold {
+  @apply bg-[#1C1C1E] border border-[rgba(199,154,107,0.2)] rounded-lg p-6 transition-all duration-300;
+}
+
+.card-gold:hover {
+  @apply border-[#C79A6B] -translate-y-1;
+}
+
+/* Trust Badge */
+.trust-badge {
+  @apply flex items-center gap-3 px-4 py-3 bg-[#1C1C1E] border border-[rgba(199,154,107,0.2)] rounded-lg;
+}
+
+/* Navigation */
+.nav-link {
+  @apply text-sm font-medium uppercase tracking-wider text-[#F4F1EC] relative py-2 transition-colors duration-300;
+}
+
+.nav-link::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-[#C79A6B] transition-all duration-300;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  @apply w-full;
+}
+
+/* Chatbot */
+.chatbot-widget {
+  @apply fixed bottom-6 right-6 z-50;
+}
+
+.chatbot-toggle {
+  @apply w-14 h-14 bg-[#C79A6B] rounded-full flex items-center justify-center text-2xl shadow-lg transition-all duration-300 hover:scale-110;
+}
+
+.chatbot-window {
+  @apply absolute bottom-20 right-0 w-80 bg-[#141415] border border-[rgba(199,154,107,0.2)] rounded-lg shadow-2xl overflow-hidden opacity-0 invisible transition-all duration-300;
+}
+
+.chatbot-window.active {
+  @apply opacity-100 visible;
+}
+
+/* Lightbox */
+.lightbox {
+  @apply fixed inset-0 z-[100] bg-black/95 flex items-center justify-center opacity-0 invisible transition-all duration-300;
+}
+
+.lightbox.active {
+  @apply opacity-100 visible;
+}
+
+/* Form Styles */
+.form-input {
+  @apply w-full bg-[#1C1C1E] border border-[rgba(199,154,107,0.2)] rounded-lg px-4 py-3 text-[#F4F1EC] placeholder-[#6B6560] transition-all duration-300 focus:outline-none focus:border-[#C79A6B];
+}
+
+/* Health Badge */
+.health-badge {
+  @apply inline-block px-3 py-1 bg-green-500/20 text-green-400 rounded text-sm font-semibold;
+}
+
+/* Glass Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(199, 154, 107, 0.15);
+  backdrop-filter: blur(10px);
+}
